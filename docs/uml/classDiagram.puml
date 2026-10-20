@@ -1,0 +1,27 @@
+@startuml classDiagram
+
++class User {
+    -ID : Integer
+    -firstName : String
+    -lastName : String
+    -login : String
+    -password : String
+
+    -doLogin()
+    -doLogout()
+    
+}
+
++class Color {
+    -ID : Integer
+    -name : String
+    -userID : Integer
+
+
+    -addColor()
+    -searchColor()
+}
+
+User "1" -- "0..*" Color : owns
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml activityDiagram
+
+start
+
+:Enter login and password;
+:Submit login;
+:Checks credentials against Users table;
+if(Credentials valid) then (yes)
+:Login;
+
+repeat
+    if(User chooses) then (search)
+        :Search colors;
+    else(add)
+        :Add color;
+    endif
+repeat while (Continue using app?) is (yes)
+
+:Logout;
+
+
+else(no)
+:Display error message;
+:Stay on login page;
+endif
+
+stop
+
+@enduml
